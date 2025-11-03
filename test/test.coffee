@@ -1,5 +1,5 @@
-app=require '../app.coffee'
-assert=require 'assert'
+import app from '../app.coffee'
+import assert from 'assert'
 
 # dummy test for code integrity
 it "should be able to run",(done)->
