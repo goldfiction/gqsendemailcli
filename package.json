@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A cli commandline tool for sending emails",
   "main": "app.js",
+  "repository": "git@github.com:goldfiction/gqsendemailcli.git",
   "node_version": "18.20.2",
   "type": "module",
   "dependencies": {
