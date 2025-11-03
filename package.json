@@ -1,12 +1,11 @@
 {
   "name": "gqsendemailcli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A cli commandline tool for sending emails",
-  "main": "app.js",
+  "main": "app.coffee",
   "private": false,
   "repository": "git@github.com:goldfiction/gqsendemailcli.git",
   "node_version": "18.20.2",
-  "type": "module",
   "dependencies": {
     "gqemail": "^1.0.11"
   },
@@ -16,8 +15,8 @@
     "nodemon": "3.1.10"
   },
   "scripts": {
-    "start": "node app.js test@gmail.com title hello",
-    "test": "mocha --openssl-legacy-provider --require coffeescript/register --no-color --reporter min -t 20000 test/test.coffee",
+    "start": "node --require coffeescript/register app.coffee test@gmail.com title hello",
+    "test": "node --require coffeescript/register test/test.coffee",
     "test:watch": "nodemon --delay 2 -q -x \"npm test\"",
     "test:slow": "mocha --openssl-legacy-provider --require coffeescript/register --no-color --reporter min -t 20000 test/test.slow.coffee",
     "install": "npm install --no-bin-links --no-optional --omit=optional --ignore-scripts",
